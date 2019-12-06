@@ -1,3 +1,5 @@
+import { UserActionTypes } from './user.types';
+
 // manages the state of the user
 // a reducer recieves an action and a payload to update the state
 
@@ -9,7 +11,7 @@ const INITIAL_STATE = {
 // if the state is not provided, set it to the initial state using default param value
 const userReducer = (state = INITIAL_STATE, action) =>  {
   switch(action.type) {
-    case 'SET_CURRENT_USER':
+    case UserActionTypes.SET_CURRENT_USER :
         return {
           ...state,
           currentUser:action.payload
